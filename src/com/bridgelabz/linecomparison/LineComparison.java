@@ -5,6 +5,8 @@ import java.util.Scanner;
 public class LineComparison 
 {
 	 public static int getLengthOfLine(Scanner scanner)
+		
+		
 	 {
          System.out.println("Please enter x1");
          int x1 = scanner.nextInt();
@@ -35,17 +37,22 @@ public class LineComparison
          System.out.println("Please enter values for line 2");
          int lenthOfline_2 = getLengthOfLine(scanner);
         
-         String val1=String.valueOf(lenthOfline_1);
-         String val2=String.valueOf(lenthOfline_2);
+         int val1=lenthOfline_1;
+         int val2=lenthOfline_2;
         
-         if(val1.equals(val2)){
+         if(val1 == val2)
+         {
                  System.out.println("Both lines are equal");
          }
-         else 
+         else if(val1 < val2)
          {
-                 System.out.println("Both lines are not equal");
+                 System.out.println("line 2 is greater");
          }
-         scanner.close();        
-}
-
+         else
+         {
+                 System.out.println("line 1 is greater");
+         }
+         
+         scanner.close();
+         }
 }
